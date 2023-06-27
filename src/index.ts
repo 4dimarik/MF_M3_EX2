@@ -1,4 +1,16 @@
-const totalPrice = ({ price, discount, isInstallment, months }) => {
+interface TotalPriceProps {
+  price: number;
+  discount: number;
+  isInstallment: boolean;
+  months: number;
+}
+
+const totalPrice = ({
+  price,
+  discount,
+  isInstallment,
+  months,
+}: TotalPriceProps) => {
   // Your code here...
 };
 
