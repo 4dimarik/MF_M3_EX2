@@ -11,8 +11,16 @@ const totalPrice = ({
   isInstallment,
   months,
 }: TotalPriceProps) => {
-  // Your code here...
+  const priceWithDiscount = price * (1 - discount / 100);
+  return isInstallment ? priceWithDiscount / months : priceWithDiscount;
 };
 
-totalPrice({ price: 100000, discount: 25, isInstallment: true, months: 12 });
+const result = totalPrice({
+  price: 100000,
+  discount: 25,
+  isInstallment: true,
+  months: 12,
+});
+
+console.log(result);
 // 6250
